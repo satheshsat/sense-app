@@ -1,0 +1,31 @@
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <ion-card-content>
+      <form (submit)="save($event)">
+        <ion-input
+          type="email"
+          fill="solid"
+          label="Email"
+          labelPlacement="floating"
+          helperText="Enter a valid email"
+          errorText="Invalid email"
+          [(ngModel)] = "email"
+          name="email"
+        ></ion-input>
+        <ion-input
+          type="password"
+          fill="solid"
+          label="Password"
+          labelPlacement="floating"
+          helperText="Enter a valid password"
+          [(ngModel)] = "password"
+          name="password"
+        ></ion-input>
+        <ion-button expand="block" type="submit">Save</ion-button>
+        <ion-button routerLink="/auth/resetpass" expand="block">Forget Password</ion-button>
+        </form>
+        </ion-card-content>
+  </ion-card>
+
+</ion-content>

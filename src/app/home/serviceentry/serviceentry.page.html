@@ -1,0 +1,159 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Service Entry</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Service Entry</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <!-- <ion-card-header>
+      <ion-card-title>Card Title</ion-card-title>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+    </ion-card-header> -->
+  
+    <ion-card-content>
+      <form (submit)="save($event)">
+        <ion-input
+          type="text"
+          fill="solid"
+          label="Name"
+          labelPlacement="floating"
+          helperText="Enter a valid name"
+          errorText="Invalid name"
+          [(ngModel)] = "name"
+          name="name"
+        ></ion-input>
+        <ion-input
+          type="text"
+          fill="solid"
+          label="Address1"
+          labelPlacement="floating"
+          helperText="Enter a valid address"
+          [(ngModel)] = "address1"
+          name="address1"
+        ></ion-input>
+        <ion-input
+          type="text"
+          fill="solid"
+          label="Address2"
+          labelPlacement="floating"
+          helperText="Enter a valid address"
+          [(ngModel)] = "address2"
+          name="address2"
+        ></ion-input>
+        <ion-input
+          type="text"
+          fill="solid"
+          label="Address3"
+          labelPlacement="floating"
+          helperText="Enter a valid address"
+          [(ngModel)] = "address3"
+          name="address3"
+        ></ion-input>
+        <ion-input
+          type="text"
+          fill="solid"
+          label="Place"
+          labelPlacement="floating"
+          helperText="Enter a valid place"
+          [(ngModel)] = "place"
+          name="place"
+        ></ion-input>
+        <ion-input
+          type="text"
+          fill="solid"
+          label="city"
+          labelPlacement="floating"
+          helperText="Enter a valid city"
+          [(ngModel)] = "city"
+          name="city"
+        ></ion-input>
+        <ion-input
+          type="text"
+          fill="solid"
+          label="mobileno"
+          labelPlacement="floating"
+          helperText="Enter a valid mobileno"
+          [(ngModel)] = "mobileno"
+          name="mobileno"
+        ></ion-input>
+        <ion-input
+          type="text"
+          fill="solid"
+          label="Party Type"
+          labelPlacement="floating"
+          helperText="Enter a valid groupcode"
+          [(ngModel)] = "groupcode"
+          name="groupcode"
+        ></ion-input>
+        <ion-input
+          type="text"
+          fill="solid"
+          label="gstno"
+          labelPlacement="floating"
+          helperText="Enter a valid gstno"
+          [(ngModel)] = "gstno"
+          name="gstno"
+        ></ion-input>
+        <ion-input
+          type="text"
+          fill="solid"
+          label="gpayid"
+          labelPlacement="floating"
+          helperText="Enter a valid gpayid"
+          [(ngModel)] = "gpayid"
+          name="gpayid"
+        ></ion-input>
+        <ion-input
+          type="text"
+          fill="solid"
+          label="banckaccno"
+          labelPlacement="floating"
+          helperText="Enter a valid banckaccno"
+          [(ngModel)] = "banckaccno"
+          name="banckaccno"
+        ></ion-input>
+        <ion-input
+          type="text"
+          fill="solid"
+          label="ifsc"
+          labelPlacement="floating"
+          helperText="Enter a valid ifsc"
+          [(ngModel)] = "ifsc"
+          name="ifsc"
+        ></ion-input>
+        <ion-input
+          type="text"
+          fill="solid"
+          label="bankaccname"
+          labelPlacement="floating"
+          helperText="Enter a valid bankaccname"
+          [(ngModel)] = "bankaccname"
+          name="bankaccname"
+        ></ion-input>
+        <ion-input
+          type="text"
+          fill="solid"
+          label="bankacctype"
+          labelPlacement="floating"
+          helperText="Enter a valid bankacctype"
+          [(ngModel)] = "bankacctype"
+          name="bankacctype"
+        ></ion-input>
+        <ion-button expand="block" type="submit">Save</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="edit()">
+      <ion-icon name="create"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

@@ -1,0 +1,114 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Products</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Products</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <!-- <ion-card-header>
+      <ion-card-title>Card Title</ion-card-title>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+    </ion-card-header> -->
+  
+    <ion-card-content>
+      <form (submit)="save($event)">
+        <ion-input
+          type="text"
+          fill="solid"
+          label="Name"
+          labelPlacement="floating"
+          helperText="Enter a valid name"
+          errorText="Invalid name"
+          [(ngModel)] = "name"
+          name="name"
+        ></ion-input>
+        <ion-input
+          type="text"
+          fill="solid"
+          label="Units"
+          labelPlacement="floating"
+          helperText="Enter a valid unit"
+          [(ngModel)] = "units"
+          name="units"
+        ></ion-input>
+        <ion-input
+          type="number"
+          fill="solid"
+          label="Tax percentage"
+          labelPlacement="floating"
+          helperText="Enter a valid Tax percentage"
+          [(ngModel)] = "taxper"
+          name="taxper"
+        ></ion-input>
+        <ion-input
+          type="number"
+          fill="solid"
+          label="Purchase rate"
+          labelPlacement="floating"
+          helperText="Enter a valid Purchase rate"
+          [(ngModel)] = "prate"
+          name="prate"
+        ></ion-input>
+        <ion-input
+          type="number"
+          fill="solid"
+          label="Selling rate"
+          labelPlacement="floating"
+          helperText="Enter a valid Selling rate"
+          [(ngModel)] = "srate"
+          name="srate"
+        ></ion-input>
+        <ion-input
+          type="number"
+          fill="solid"
+          label="MRP"
+          labelPlacement="floating"
+          helperText="Enter a valid MRP"
+          [(ngModel)] = "mrp"
+          name="mrp"
+        ></ion-input>
+        <ion-input
+          type="number"
+          fill="solid"
+          label="minimum stock"
+          labelPlacement="floating"
+          helperText="Enter a valid minimum stock"
+          [(ngModel)] = "mstk"
+          name="mstk"
+        ></ion-input>
+        <ion-input
+          type="number"
+          fill="solid"
+          label="Open Stack"
+          labelPlacement="floating"
+          helperText="Enter a valid Open Stack"
+          [(ngModel)] = "opstk"
+          name="opstk"
+        ></ion-input>
+        <ion-input
+          type="number"
+          fill="solid"
+          label="HSN"
+          labelPlacement="floating"
+          helperText="Enter a valid hsn"
+          [(ngModel)] = "hsn"
+          name="hsn"
+        ></ion-input>
+        <ion-button expand="block" type="submit">Save</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="edit()">
+      <ion-icon name="create"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

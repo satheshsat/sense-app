@@ -1,0 +1,70 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Users</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Users</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-card>
+    <!-- <ion-card-header>
+      <ion-card-title>Card Title</ion-card-title>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+    </ion-card-header> -->
+  
+    <ion-card-content>
+      <form (submit)="save($event)">
+        <ion-input
+          type="text"
+          fill="solid"
+          label="Name"
+          labelPlacement="floating"
+          helperText="Enter a valid name"
+          errorText="Invalid name"
+          [(ngModel)] = "name"
+          name="name"
+        ></ion-input>
+        <ion-input
+          type="email"
+          fill="solid"
+          label="Email"
+          labelPlacement="floating"
+          helperText="Enter a valid email"
+          [(ngModel)] = "email"
+          name="email"
+        ></ion-input>
+        <!-- <ion-input
+          type="text"
+          fill="solid"
+          label="Role"
+          labelPlacement="floating"
+          helperText="Enter a valid role"
+          [(ngModel)] = "address2"
+          name="address2"
+        ></ion-input> -->
+        <ion-input
+          type="text"
+          fill="solid"
+          label="Password"
+          labelPlacement="floating"
+          helperText="Enter a valid password"
+          [(ngModel)] = "password"
+          name="password"
+        ></ion-input>
+        <ion-button expand="block" type="submit">Save</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="edit()">
+      <ion-icon name="create"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "sense-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
