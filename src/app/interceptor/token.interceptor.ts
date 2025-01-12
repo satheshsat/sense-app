@@ -12,12 +12,12 @@ export const tokenInterceptor: HttpInterceptorFn = (req, next) => {
   const http = inject(HttpClient)
   const token = storageService.get('accessToken');
   const refreshToken = storageService.get('refreshToken');
+  if(req.url.indexOf('/auth') != -1){
+    return next(req);
+  }
   if(!isTokenValid(refreshToken)){
     storageService.clear();
     router.navigateByUrl('/auth/login');
-    return next(req);
-  }
-  if(req.url.indexOf('/auth') != -1){
     return next(req);
   }
   if(!token){
