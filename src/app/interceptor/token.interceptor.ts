@@ -4,12 +4,19 @@ import { jwtDecode } from "jwt-decode";
 import { catchError, map, skip, switchMap, throwError } from 'rxjs';
 import { Router } from '@angular/router';
 import { inject } from '@angular/core';
-const url = 'https://expressjs-murex.vercel.app/api/auth/';
+import { environment } from 'src/environments/environment';
+const url = `${environment.url}/api/auth/`;
 export const tokenInterceptor: HttpInterceptorFn = (req, next) => {
   const storageService = inject(StorageService);
   const router = inject(Router);
   const http = inject(HttpClient)
   const token = storageService.get('accessToken');
+  const refreshToken = storageService.get('refreshToken');
+  if(!isTokenValid(refreshToken)){
+    storageService.clear();
+    router.navigateByUrl('/auth/login');
+    return next(req);
+  }
   if(req.url.indexOf('/auth') != -1){
     return next(req);
   }

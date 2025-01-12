@@ -13,7 +13,14 @@
           [(ngModel)] = "email"
           name="email"
         ></ion-input>
-        <ion-button expand="block" type="submit">Submit</ion-button>
+        <ion-button [disabled]="loading" expand="block" type="submit">
+          @if(loading){
+            <ion-spinner name="lines-sharp-small"></ion-spinner>
+          }
+            Submit</ion-button>
+            @if(message){
+              <ion-text color="danger">{{message}}</ion-text>
+            }
         <ion-button routerLink="/auth/login" expand="block">Login</ion-button>
         </form>
         </ion-card-content>

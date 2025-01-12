@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardContent, IonInput, IonButton } from '@ionic/angular/standalone';
+import {  IonText, IonSpinner, IonContent, IonCard, IonCardContent, IonInput, IonButton } from '@ionic/angular/standalone';
 import { AuthService } from 'src/app/service/auth.service';
 import { Router,RouterModule } from '@angular/router';
 
@@ -10,7 +10,7 @@ import { Router,RouterModule } from '@angular/router';
   templateUrl: './resetpass.page.html',
   styleUrls: ['./resetpass.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonCard, IonCardContent, IonInput, IonButton, RouterModule]
+  imports: [ IonText, IonSpinner, IonContent, CommonModule, FormsModule, IonCard, IonCardContent, IonInput, IonButton, RouterModule]
 })
 export class ResetpassPage implements OnInit {
 

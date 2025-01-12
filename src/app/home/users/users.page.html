@@ -57,7 +57,15 @@
           [(ngModel)] = "password"
           name="password"
         ></ion-input>
-        <ion-button expand="block" type="submit">Save</ion-button>
+        <ion-button [disabled]="loading" expand="block" type="submit">
+          @if(loading){
+            <ion-spinner name="lines-sharp-small"></ion-spinner>
+            }
+          Save
+        </ion-button>
+        @if(message){
+          <ion-text color="danger">{{message}}</ion-text>
+        }
       </form>
     </ion-card-content>
   </ion-card>
