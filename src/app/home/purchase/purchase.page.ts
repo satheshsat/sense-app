@@ -6,13 +6,13 @@ import { addIcons } from 'ionicons';
 import { create } from 'ionicons/icons';
 
 @Component({
-  selector: 'app-jobcard',
-  templateUrl: './jobcard.page.html',
-  styleUrls: ['./jobcard.page.scss'],
+  selector: 'app-purchase',
+  templateUrl: './purchase.page.html',
+  styleUrls: ['./purchase.page.scss'],
   standalone: true,
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButton, IonCard, IonCardContent, IonInput, IonFab, IonFabButton, IonIcon]
 })
-export class JobcardPage implements OnInit {
+export class PurchasePage implements OnInit {
 
   yearcode: string = '';
       compcode: String='';
@@ -20,13 +20,8 @@ export class JobcardPage implements OnInit {
       entrydate: String='';
       billno: String='';
       billdate: String='';
-      jctype: Number|null = null;
-      jsstatus: String = '';
-      intime: String = '';
-      outtime: String = '';
       narration: String = '';
       vendorid: Number|null = null;
-      customerid: Number|null = null;
       products:any = [];
     
       alertController = inject(AlertController);

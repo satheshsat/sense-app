@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthService {
-  url = 'http://localhost:5000/api/auth/';
+  url = 'https://sense-api.vercel.app/api/auth/';
 
   constructor(private http: HttpClient) { }
 

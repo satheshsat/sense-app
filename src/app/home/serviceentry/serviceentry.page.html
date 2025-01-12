@@ -22,130 +22,293 @@
         <ion-input
           type="text"
           fill="solid"
-          label="Name"
+          label="yearcode"
           labelPlacement="floating"
-          helperText="Enter a valid name"
-          errorText="Invalid name"
-          [(ngModel)] = "name"
-          name="name"
+          helperText="Enter a valid yearcode"
+          errorText="Invalid yearcode"
+          [(ngModel)] = "yearcode"
+          name="yearcode"
         ></ion-input>
         <ion-input
           type="text"
           fill="solid"
-          label="Address1"
+          label="compcode"
           labelPlacement="floating"
-          helperText="Enter a valid address"
-          [(ngModel)] = "address1"
-          name="address1"
+          helperText="Enter a valid compcode"
+          [(ngModel)] = "compcode"
+          name="compcode"
         ></ion-input>
         <ion-input
           type="text"
           fill="solid"
-          label="Address2"
+          label="entryno"
           labelPlacement="floating"
-          helperText="Enter a valid address"
-          [(ngModel)] = "address2"
-          name="address2"
+          helperText="Enter a valid entryno"
+          [(ngModel)] = "entryno"
+          name="entryno"
         ></ion-input>
         <ion-input
           type="text"
           fill="solid"
-          label="Address3"
+          label="entrydate"
           labelPlacement="floating"
-          helperText="Enter a valid address"
-          [(ngModel)] = "address3"
-          name="address3"
+          helperText="Enter a valid entrydate"
+          [(ngModel)] = "entrydate"
+          name="entrydate"
         ></ion-input>
         <ion-input
           type="text"
           fill="solid"
-          label="Place"
+          label="billno"
           labelPlacement="floating"
-          helperText="Enter a valid place"
-          [(ngModel)] = "place"
-          name="place"
+          helperText="Enter a valid billno"
+          [(ngModel)] = "billno"
+          name="billno"
         ></ion-input>
         <ion-input
           type="text"
           fill="solid"
-          label="city"
+          label="billdate"
           labelPlacement="floating"
-          helperText="Enter a valid city"
-          [(ngModel)] = "city"
-          name="city"
+          helperText="Enter a valid billdate"
+          [(ngModel)] = "billdate"
+          name="billdate"
         ></ion-input>
         <ion-input
           type="text"
           fill="solid"
-          label="mobileno"
+          label="jcno"
           labelPlacement="floating"
-          helperText="Enter a valid mobileno"
-          [(ngModel)] = "mobileno"
-          name="mobileno"
+          helperText="Enter a valid jcno"
+          [(ngModel)] = "jcno"
+          name="jcno"
         ></ion-input>
         <ion-input
           type="text"
           fill="solid"
-          label="Party Type"
+          label="jcdate"
           labelPlacement="floating"
-          helperText="Enter a valid groupcode"
-          [(ngModel)] = "groupcode"
-          name="groupcode"
+          helperText="Enter a valid jcdate"
+          [(ngModel)] = "jcdate"
+          name="jcdate"
         ></ion-input>
         <ion-input
           type="text"
           fill="solid"
-          label="gstno"
+          label="jctype"
           labelPlacement="floating"
-          helperText="Enter a valid gstno"
-          [(ngModel)] = "gstno"
-          name="gstno"
+          helperText="Enter a valid jctype"
+          [(ngModel)] = "jctype"
+          name="jctype"
         ></ion-input>
         <ion-input
           type="text"
           fill="solid"
-          label="gpayid"
+          label="jsstatus"
           labelPlacement="floating"
-          helperText="Enter a valid gpayid"
-          [(ngModel)] = "gpayid"
-          name="gpayid"
+          helperText="Enter a valid jsstatus"
+          [(ngModel)] = "jsstatus"
+          name="jsstatus"
         ></ion-input>
         <ion-input
           type="text"
           fill="solid"
-          label="banckaccno"
+          label="servicestatus"
           labelPlacement="floating"
-          helperText="Enter a valid banckaccno"
-          [(ngModel)] = "banckaccno"
-          name="banckaccno"
+          helperText="Enter a valid servicestatus"
+          [(ngModel)] = "servicestatus"
+          name="servicestatus"
         ></ion-input>
         <ion-input
           type="text"
           fill="solid"
-          label="ifsc"
+          label="intime"
           labelPlacement="floating"
-          helperText="Enter a valid ifsc"
-          [(ngModel)] = "ifsc"
-          name="ifsc"
+          helperText="Enter a valid intime"
+          [(ngModel)] = "intime"
+          name="intime"
         ></ion-input>
         <ion-input
           type="text"
           fill="solid"
-          label="bankaccname"
+          label="outtime"
           labelPlacement="floating"
-          helperText="Enter a valid bankaccname"
-          [(ngModel)] = "bankaccname"
-          name="bankaccname"
+          helperText="Enter a valid outtime"
+          [(ngModel)] = "outtime"
+          name="outtime"
         ></ion-input>
         <ion-input
           type="text"
           fill="solid"
-          label="bankacctype"
+          label="narration"
           labelPlacement="floating"
-          helperText="Enter a valid bankacctype"
-          [(ngModel)] = "bankacctype"
-          name="bankacctype"
+          helperText="Enter a valid narration"
+          [(ngModel)] = "narration"
+          name="narration"
         ></ion-input>
+        <ion-input
+          type="text"
+          fill="solid"
+          label="vendorid"
+          labelPlacement="floating"
+          helperText="Enter a valid vendorid"
+          [(ngModel)] = "vendorid"
+          name="vendorid"
+        ></ion-input>
+        <ion-input
+          type="text"
+          fill="solid"
+          label="customerid"
+          labelPlacement="floating"
+          helperText="Enter a valid customerid"
+          [(ngModel)] = "customerid"
+          name="customerid"
+        ></ion-input>
+        <ion-input
+          type="text"
+          fill="solid"
+          label="serviceengineerid"
+          labelPlacement="floating"
+          helperText="Enter a valid serviceengineerid"
+          [(ngModel)] = "serviceengineerid"
+          name="serviceengineerid"
+        ></ion-input>
+        @for (p of products; track p; let i = $index) {
+          <h1>Product {{i+1}}</h1>
+          <ion-input
+            type="number"
+            fill="solid"
+            label="sno"
+            labelPlacement="floating"
+            helperText="Enter a valid sno"
+            [(ngModel)] = "products[i].sno"
+            name="sno"
+          ></ion-input>
+          <ion-input
+            type="number"
+            fill="solid"
+            label="productid"
+            labelPlacement="floating"
+            helperText="Enter a valid productid"
+            [(ngModel)] = "products[i].productid"
+            name="productid"
+          ></ion-input>
+
+          <ion-input
+            type="text"
+            fill="solid"
+            label="productname"
+            labelPlacement="floating"
+            helperText="Enter a valid productname"
+            [(ngModel)] = "products[i].productname"
+            name="productname"
+          ></ion-input>
+
+          <ion-input
+            type="number"
+            fill="solid"
+            label="quantity"
+            labelPlacement="floating"
+            helperText="Enter a valid quantity"
+            [(ngModel)] = "products[i].quantity"
+            name="quantity"
+          ></ion-input>
+          <ion-input
+            type="number"
+            fill="solid"
+            label="rate"
+            labelPlacement="floating"
+            helperText="Enter a valid rate"
+            [(ngModel)] = "products[i].rate"
+            name="rate"
+          ></ion-input>
+          <ion-input
+            type="number"
+            fill="solid"
+            label="amount"
+            labelPlacement="floating"
+            helperText="Enter a valid amount"
+            [(ngModel)] = "products[i].amount"
+            name="amount"
+          ></ion-input>
+          <ion-input
+            type="number"
+            fill="solid"
+            label="taxper"
+            labelPlacement="floating"
+            helperText="Enter a valid taxper"
+            [(ngModel)] = "products[i].taxper"
+            name="taxper"
+          ></ion-input>
+          <ion-input
+            type="number"
+            fill="solid"
+            label="taxamount"
+            labelPlacement="floating"
+            helperText="Enter a valid taxamount"
+            [(ngModel)] = "products[i].taxamount"
+            name="taxamount"
+          ></ion-input>
+          <ion-input
+            type="number"
+            fill="solid"
+            label="taxableamount"
+            labelPlacement="floating"
+            helperText="Enter a valid taxableamount"
+            [(ngModel)] = "products[i].taxableamount"
+            name="taxableamount"
+          ></ion-input>
+
+          <ion-input
+            type="number"
+            fill="solid"
+            label="loading"
+            labelPlacement="floating"
+            helperText="Enter a valid loading"
+            [(ngModel)] = "products[i].loading"
+            name="loading"
+          ></ion-input>
+          <ion-input
+            type="number"
+            fill="solid"
+            label="unloading"
+            labelPlacement="floating"
+            helperText="Enter a valid unloading"
+            [(ngModel)] = "products[i].unloading"
+            name="unloading"
+          ></ion-input>
+          <ion-input
+            type="number"
+            fill="solid"
+            label="discountper"
+            labelPlacement="floating"
+            helperText="Enter a valid discountper"
+            [(ngModel)] = "products[i].discountper"
+            name="discountper"
+          ></ion-input>
+          <ion-input
+            type="number"
+            fill="solid"
+            label="discountamount"
+            labelPlacement="floating"
+            helperText="Enter a valid discountamount"
+            [(ngModel)] = "products[i].discountamount"
+            name="discountamount"
+          ></ion-input>
+          <ion-input
+            type="number"
+            fill="solid"
+            label="totalamount"
+            labelPlacement="floating"
+            helperText="Enter a valid totalamount"
+            [(ngModel)] = "products[i].totalamount"
+            name="totalamount"
+          ></ion-input>
+          @if(products.length > 1){
+            <ion-button (click)="removeProduct(i)">Remove Product</ion-button>
+          }
+        }
+        <ion-button (click)="addProduct()">Add Product</ion-button>
         <ion-button expand="block" type="submit">Save</ion-button>
       </form>
     </ion-card-content>

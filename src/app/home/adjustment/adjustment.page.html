@@ -10,4 +10,208 @@
       <ion-title size="large">Adjustment</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-card>
+    <!-- <ion-card-header>
+      <ion-card-title>Card Title</ion-card-title>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+    </ion-card-header> -->
+  
+    <ion-card-content>
+      <form (submit)="save($event)">
+        <ion-input
+          type="text"
+          fill="solid"
+          label="yearcode"
+          labelPlacement="floating"
+          helperText="Enter a valid yearcode"
+          errorText="Invalid yearcode"
+          [(ngModel)] = "yearcode"
+          name="yearcode"
+        ></ion-input>
+        <ion-input
+          type="text"
+          fill="solid"
+          label="compcode"
+          labelPlacement="floating"
+          helperText="Enter a valid compcode"
+          [(ngModel)] = "compcode"
+          name="compcode"
+        ></ion-input>
+        <ion-input
+          type="text"
+          fill="solid"
+          label="entryno"
+          labelPlacement="floating"
+          helperText="Enter a valid entryno"
+          [(ngModel)] = "entryno"
+          name="entryno"
+        ></ion-input>
+        <ion-input
+          type="text"
+          fill="solid"
+          label="entrydate"
+          labelPlacement="floating"
+          helperText="Enter a valid entrydate"
+          [(ngModel)] = "entrydate"
+          name="entrydate"
+        ></ion-input>
+        <ion-input
+          type="text"
+          fill="solid"
+          label="narration"
+          labelPlacement="floating"
+          helperText="Enter a valid narration"
+          [(ngModel)] = "narration"
+          name="narration"
+        ></ion-input>
+        <ion-input
+          type="text"
+          fill="solid"
+          label="dorc"
+          labelPlacement="floating"
+          helperText="Enter a valid dorc"
+          [(ngModel)] = "dorc"
+          name="dorc"
+        ></ion-input>
+        @for (p of products; track p; let i = $index) {
+          <h1>Product {{i+1}}</h1>
+          <ion-input
+            type="number"
+            fill="solid"
+            label="sno"
+            labelPlacement="floating"
+            helperText="Enter a valid sno"
+            [(ngModel)] = "products[i].sno"
+            name="sno"
+          ></ion-input>
+          <ion-input
+            type="number"
+            fill="solid"
+            label="productid"
+            labelPlacement="floating"
+            helperText="Enter a valid productid"
+            [(ngModel)] = "products[i].productid"
+            name="productid"
+          ></ion-input>
+
+          <ion-input
+            type="text"
+            fill="solid"
+            label="productname"
+            labelPlacement="floating"
+            helperText="Enter a valid productname"
+            [(ngModel)] = "products[i].productname"
+            name="productname"
+          ></ion-input>
+
+          <ion-input
+            type="number"
+            fill="solid"
+            label="quantity"
+            labelPlacement="floating"
+            helperText="Enter a valid quantity"
+            [(ngModel)] = "products[i].quantity"
+            name="quantity"
+          ></ion-input>
+          <ion-input
+            type="number"
+            fill="solid"
+            label="rate"
+            labelPlacement="floating"
+            helperText="Enter a valid rate"
+            [(ngModel)] = "products[i].rate"
+            name="rate"
+          ></ion-input>
+          <ion-input
+            type="number"
+            fill="solid"
+            label="amount"
+            labelPlacement="floating"
+            helperText="Enter a valid amount"
+            [(ngModel)] = "products[i].amount"
+            name="amount"
+          ></ion-input>
+          <ion-input
+            type="number"
+            fill="solid"
+            label="taxper"
+            labelPlacement="floating"
+            helperText="Enter a valid taxper"
+            [(ngModel)] = "products[i].taxper"
+            name="taxper"
+          ></ion-input>
+          <ion-input
+            type="number"
+            fill="solid"
+            label="taxamount"
+            labelPlacement="floating"
+            helperText="Enter a valid taxamount"
+            [(ngModel)] = "products[i].taxamount"
+            name="taxamount"
+          ></ion-input>
+          <ion-input
+            type="number"
+            fill="solid"
+            label="taxableamount"
+            labelPlacement="floating"
+            helperText="Enter a valid taxableamount"
+            [(ngModel)] = "products[i].taxableamount"
+            name="taxableamount"
+          ></ion-input>
+
+          <ion-input
+            type="number"
+            fill="solid"
+            label="loading"
+            labelPlacement="floating"
+            helperText="Enter a valid loading"
+            [(ngModel)] = "products[i].loading"
+            name="loading"
+          ></ion-input>
+          <ion-input
+            type="number"
+            fill="solid"
+            label="unloading"
+            labelPlacement="floating"
+            helperText="Enter a valid unloading"
+            [(ngModel)] = "products[i].unloading"
+            name="unloading"
+          ></ion-input>
+          <ion-input
+            type="number"
+            fill="solid"
+            label="discountper"
+            labelPlacement="floating"
+            helperText="Enter a valid discountper"
+            [(ngModel)] = "products[i].discountper"
+            name="discountper"
+          ></ion-input>
+          <ion-input
+            type="number"
+            fill="solid"
+            label="discountamount"
+            labelPlacement="floating"
+            helperText="Enter a valid discountamount"
+            [(ngModel)] = "products[i].discountamount"
+            name="discountamount"
+          ></ion-input>
+          <ion-input
+            type="number"
+            fill="solid"
+            label="totalamount"
+            labelPlacement="floating"
+            helperText="Enter a valid totalamount"
+            [(ngModel)] = "products[i].totalamount"
+            name="totalamount"
+          ></ion-input>
+          @if(products.length > 1){
+            <ion-button (click)="removeProduct(i)">Remove Product</ion-button>
+          }
+        }
+        <ion-button (click)="addProduct()">Add Product</ion-button>
+        <ion-button expand="block" type="submit">Save</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

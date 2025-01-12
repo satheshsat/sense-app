@@ -14,25 +14,56 @@ import { create } from 'ionicons/icons';
 })
 export class ServiceentryPage implements OnInit {
 
-  name: string = '';
-    address1: String='';
-    address2: String='';
-    address3: String='';
-    place: String='';
-    city: String='';
-    mobileno: String='';
-    groupcode: String='';
-    gstno: String='';
-    gpayid: String='';
-    banckaccno: String='';
-    ifsc: String='';
-    bankaccname: String='';
-    bankacctype: String='';
+    yearcode: string = '';
+    compcode: String='';
+    entryno: String='';
+    entrydate: String='';
+    billno: String='';
+    billdate: String='';
+    jcno: Number|null = null;
+    jcdate: String = '';
+    jctype: Number|null = null;
+    jsstatus: String = '';
+    servicestatus: String = '';
+    intime: String = '';
+    outtime: String = '';
+    narration: String = '';
+    vendorid: Number|null = null;
+    customerid: Number|null = null;
+    serviceengineerid: Number|null = null;
+    products:any = [];
   
     alertController = inject(AlertController);
   
     constructor() {
       addIcons({ create });
+      this.addProduct();
+    }
+
+    removeProduct(i:any) {
+      this.products.splice(i,1);
+      // this.products = this.products.filter((val: any) => val)
+    }
+
+    addProduct(){
+      this.products.push(
+        {
+          sno: '',
+          productid: '',
+          productname: '',
+          quantity: '',
+          rate: '',
+          amount: '',
+          taxper: '',
+          taxamount: '',
+          taxableamount: '',
+          loading: '',
+          unloading: '',
+          discountper: '',
+          discountamount: '',
+          totalamount:''
+      }
+      );
     }
   
     async edit(){

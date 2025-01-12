@@ -40,6 +40,10 @@ export const routes: Routes = [
           {
             path: 'adjustment',
             loadComponent: () => import('./adjustment/adjustment.page').then(m => m.AdjustmentPage),
+          },
+          {
+            path: 'purchase',
+            loadComponent: () => import('./purchase/purchase.page').then(m => m.PurchasePage),
           }
         ]
     },
@@ -70,6 +74,10 @@ export const routes: Routes = [
   {
     path: 'adjustment',
     loadComponent: () => import('./adjustment/adjustment.page').then( m => m.AdjustmentPage)
+  },
+  {
+    path: 'purchase',
+    loadComponent: () => import('./purchase/purchase.page').then( m => m.PurchasePage)
   }
 
 ];

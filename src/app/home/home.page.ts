@@ -26,6 +26,7 @@ export class HomePage implements OnInit {
       { title: 'Users', url: '/home/users', icon: 'paper-plane' },
       { title: 'Service Entry', url: '/home/serviceentry', icon: 'heart' },
       { title: 'Products', url: '/home/products', icon: 'archive' },
+      { title: 'Purchase', url: '/home/purchase', icon: 'archive' },
       { title: 'Job Card', url: '/home/jobcard', icon: 'trash' },
       { title: 'Delivery', url: '/home/delivery', icon: 'warning' },
       { title: 'Adjustment', url: '/home/adjustment', icon: 'warning' },
