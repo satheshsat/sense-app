@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonSpinner, IonText, AlertController, IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonCard, IonCardContent, IonInput, IonFab, IonFabButton, IonIcon } from '@ionic/angular/standalone';
+import { IonButtons, IonMenuButton, IonSpinner, IonText, AlertController, IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonCard, IonCardContent, IonInput, IonFab, IonFabButton, IonIcon } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { create } from 'ionicons/icons';
 import { CoreService } from 'src/app/service/core.service';
@@ -12,7 +12,7 @@ import { ToastService } from 'src/app/service/toast.service';
   templateUrl: './users.page.html',
   styleUrls: ['./users.page.scss'],
   standalone: true,
-  imports: [ IonSpinner, IonText, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonIcon, IonFabButton, IonFab, IonButton, IonCardContent, IonCard, IonInput]
+  imports: [IonButtons, IonMenuButton,  IonSpinner, IonText, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonIcon, IonFabButton, IonFab, IonButton, IonCardContent, IonCard, IonInput]
 })
 export class UsersPage implements OnInit {
 

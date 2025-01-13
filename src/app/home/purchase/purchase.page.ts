@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { AlertController, IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonCard, IonCardContent, IonInput, IonFab, IonFabButton, IonIcon } from '@ionic/angular/standalone';
+import {  IonButtons, IonMenuButton, AlertController, IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonCard, IonCardContent, IonInput, IonFab, IonFabButton, IonIcon } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { create } from 'ionicons/icons';
 import { CoreService } from 'src/app/service/core.service';
@@ -12,7 +12,7 @@ import { ToastService } from 'src/app/service/toast.service';
   templateUrl: './purchase.page.html',
   styleUrls: ['./purchase.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButton, IonCard, IonCardContent, IonInput, IonFab, IonFabButton, IonIcon]
+  imports: [ IonButtons, IonMenuButton, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButton, IonCard, IonCardContent, IonInput, IonFab, IonFabButton, IonIcon]
 })
 export class PurchasePage implements OnInit {
 
