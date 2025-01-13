@@ -20,6 +20,17 @@
     <ion-card-content>
       <form (submit)="save($event)">
         <ion-input
+        disabled
+          type="text"
+          fill="solid"
+          label="Product code"
+          labelPlacement="floating"
+          helperText="Enter a valid Product code"
+          errorText="Invalid product code"
+          [(ngModel)] = "productcode"
+          name="productcode"
+        ></ion-input>
+        <ion-input
           type="text"
           fill="solid"
           label="Name"

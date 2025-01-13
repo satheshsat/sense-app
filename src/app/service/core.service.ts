@@ -98,11 +98,11 @@ export class CoreService {
   }
 
   partyMasterCode() {
-    return this.http.get(`${this.url}partymaster/productcode`);
+    return this.http.get(`${this.url}partymaster/pcode`);
   }
   partyMasterList(params: any) {
-    if(params.productcode){
-      return this.http.get(`${this.url}partymaster/list?productcode=${params.productcode}`);  
+    if(params.pcode){
+      return this.http.get(`${this.url}partymaster/list?pcode=${params.productcode}`);  
     }
     return this.http.get(`${this.url}partymaster/list`);
   }

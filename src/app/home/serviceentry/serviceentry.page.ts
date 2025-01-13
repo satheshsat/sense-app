@@ -227,7 +227,7 @@ export class ServiceentryPage implements OnInit {
       }
       this.coreService.serviceentryCreate(data).subscribe((res)=>{
         this.loading = false;
-        this.toastService.create('User Created Successfully').then((res)=>{
+        this.toastService.create('Added Successfully').then((res)=>{
           res.present()
         });
         this.yearcode = '';

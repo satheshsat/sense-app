@@ -22,6 +22,17 @@
     <ion-card-content>
       <form (submit)="save($event)">
         <ion-input
+        disabled
+          type="text"
+          fill="solid"
+          label="Pcode"
+          labelPlacement="floating"
+          helperText="Enter a pcode"
+          errorText="Invalid name"
+          [(ngModel)] = "pcode"
+          name="pcode"
+        ></ion-input>
+        <ion-input
           type="text"
           fill="solid"
           label="Name"
