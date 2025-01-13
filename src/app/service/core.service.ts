@@ -102,7 +102,7 @@ export class CoreService {
   }
   partyMasterList(params: any) {
     if(params.pcode){
-      return this.http.get(`${this.url}partymaster/list?pcode=${params.productcode}`);  
+      return this.http.get(`${this.url}partymaster/list?pcode=${params.pcode}`);  
     }
     return this.http.get(`${this.url}partymaster/list`);
   }
