@@ -111,7 +111,14 @@ export class CoreService {
     return this.http.delete(`${this.url}purchase/delete/${id}`);
   }
 
+  serviceentryEntryNo() {
+    return this.http.get(`${this.url}serviceentry/entryno`);
+  }
+
   serviceentryList(params: any) {
+    if(params.entryno){
+      return this.http.get(`${this.url}serviceentry/list?entryno=${params.entryno}`);  
+    }
     return this.http.get(`${this.url}serviceentry/list`);
   }
 
