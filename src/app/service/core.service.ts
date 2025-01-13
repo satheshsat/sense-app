@@ -31,7 +31,13 @@ export class CoreService {
     return this.http.delete(`${this.url}users/delete/${id}`);
   }
 
+  adjustmentListEntryNo() {
+    return this.http.get(`${this.url}adjustment/entryno`);
+  }
   adjustmentList(params: any) {
+    if(params.entryno){
+      return this.http.get(`${this.url}adjustment/list?entryno=${params.entryno}`);  
+    }
     return this.http.get(`${this.url}adjustment/list`);
   }
 
@@ -47,7 +53,13 @@ export class CoreService {
     return this.http.delete(`${this.url}adjustment/delete/${id}`);
   }
 
+  deliveryListEntryNo() {
+    return this.http.get(`${this.url}delivery/entryno`);
+  }
   deliveryList(params: any) {
+    if(params.entryno){
+      return this.http.get(`${this.url}delivery/list?entryno=${params.entryno}`);  
+    }
     return this.http.get(`${this.url}delivery/list`);
   }
 
@@ -63,7 +75,13 @@ export class CoreService {
     return this.http.delete(`${this.url}delivery/delete/${id}`);
   }
 
+  jobcardListEntryNo() {
+    return this.http.get(`${this.url}jobcard/entryno`);
+  }
   jobcardList(params: any) {
+    if(params.entryno){
+      return this.http.get(`${this.url}jobcard/list?entryno=${params.entryno}`);  
+    }
     return this.http.get(`${this.url}jobcard/list`);
   }
 
@@ -79,7 +97,35 @@ export class CoreService {
     return this.http.delete(`${this.url}jobcard/delete/${id}`);
   }
 
+  partyMasterCode() {
+    return this.http.get(`${this.url}partymaster/productcode`);
+  }
+  partyMasterList(params: any) {
+    if(params.productcode){
+      return this.http.get(`${this.url}partymaster/list?productcode=${params.productcode}`);  
+    }
+    return this.http.get(`${this.url}partymaster/list`);
+  }
+
+  partyMasterCreate(data: any) {
+    return this.http.post(`${this.url}partymaster/create`, data);
+  }
+
+  partyMasterUpdate(id: string,data: any) {
+    return this.http.post(`${this.url}partymaster/update/${id}`, data);
+  }
+
+  partyMasterDelete(id: string) {
+    return this.http.delete(`${this.url}partymaster/delete/${id}`);
+  }
+
+  productsListCode() {
+    return this.http.get(`${this.url}products/productcode`);
+  }
   productsList(params: any) {
+    if(params.productcode){
+      return this.http.get(`${this.url}products/list?productcode=${params.productcode}`);  
+    }
     return this.http.get(`${this.url}products/list`);
   }
 
@@ -95,7 +141,13 @@ export class CoreService {
     return this.http.delete(`${this.url}products/delete/${id}`);
   }
 
+  purchaseListEntryNo() {
+    return this.http.get(`${this.url}purchase/entryno`);
+  }
   purchaseList(params: any) {
+    if(params.entryno){
+      return this.http.get(`${this.url}purchase/list?entryno=${params.entryno}`);  
+    }
     return this.http.get(`${this.url}purchase/list`);
   }
 
