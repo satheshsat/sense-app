@@ -70,6 +70,9 @@ export class UsersPage implements OnInit {
       }, (err)=>{
         this.message = err.error?.message ? err.error?.message : 'Something went wrong please try again';
           // this.loading = false;
+          this.id = '';
+          this.name = '';
+          this.email = '';
           console.log(err);
       })
     }
