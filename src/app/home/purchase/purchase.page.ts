@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AlertController, IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonCard, IonCardContent, IonInput, IonFab, IonFabButton, IonIcon } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { create } from 'ionicons/icons';
+import { CoreService } from 'src/app/service/core.service';
 
 @Component({
   selector: 'app-purchase',
@@ -25,6 +26,7 @@ export class PurchasePage implements OnInit {
       products:any = [];
     
       alertController = inject(AlertController);
+      coreService = inject(CoreService);
     
       constructor() {
         addIcons({ create });
