@@ -61,15 +61,15 @@ export class UsersPage implements OnInit {
     }
 
     loadData(data: any) {
-      this.loading = true;
+      // this.loading = true;
       this.coreService.userList(data).subscribe((res: any)=>{
-        this.loading = false;
+        // this.loading = false;
         this.id = res._id;
         this.name = res.name;
         this.email = res.email;
       }, (err)=>{
         this.message = err.error?.message ? err.error?.message : 'Something went wrong please try again';
-          this.loading = false;
+          // this.loading = false;
           console.log(err);
       })
     }

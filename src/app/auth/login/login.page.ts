@@ -30,7 +30,7 @@ export class LoginPage implements OnInit {
     event.preventDefault();
     this.loading = true;
     this.authService.login(this.email, this.password).subscribe((res: any)=>{
-      console.log(res);
+      this.loading = false;
       this.storageService.set('userData', JSON.stringify(res.data))
       this.storageService.set('accessToken', res.accessToken)
       this.storageService.set('refreshToken', res.refreshToken)
